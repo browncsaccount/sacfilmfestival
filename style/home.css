@@ -74,7 +74,7 @@ header nav li:hover {
     }
 }
 
-@media (max-width:700px) {
+@media (max-width:768px) {
     header {
         flex-direction: column;
     }
@@ -83,6 +83,7 @@ header nav li:hover {
     }
     header nav li {
         margin: 0 7px;
+        font-size: 9px;
     }
 }
 
@@ -305,6 +306,11 @@ imageAnimation {  0% {
     }
 }
 
+@media (max-width:420px) {
+    .banner-area {
+        flex-direction: column;
+    }
+}
 
 /*about area*/
 .about-area{
@@ -353,10 +359,15 @@ ul.about-content {
 @media (max-width: 1000px) {
     .about-left,
     .about-right {
+        max-width: 100%;
         flex-basis: 100%;
     }
     .about-content li {
         padding: 8px;
+    }
+    .about-right iframe{
+        margin-top: 3rem;
+        max-width: 100%;
     }
 }
 
@@ -496,6 +507,46 @@ ul.opp-content {
     }
 }
 
+@media (max-width: 400px) {
+    .opp-area{
+        max-width: 100%;
+        padding-left: 10px;
+    }
+    .opp-left{
+        max-width: 100%;
+        justify-content: space-around;
+    }
+    .opp-right {
+        max-width: 100%;
+        font-size: 12px;
+    }
+    .opp-title{
+        font-size: 10px;
+    }
+    .opportunities-title{
+        font-size: 10px;
+        line-height: 19px;
+    }
+    .opp-content li {
+        padding: 8px;
+    }
+    .opp-left img {
+        max-width: 100%;
+        height: auto;
+    }
+    .img-box {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.img-box img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+
 #opportunities {
     display: flex;
     flex-direction: column;
@@ -537,13 +588,8 @@ ul.opp-content {
 }
 
 .img-box {
-    box-sizing: content-box;
-    height: 280px;
-    width: 450px;
     overflow: hidden;
     display: inline-block;
-    color: white;
-    background-color: white;
 }
 
 .img-box:hover img {
@@ -601,12 +647,6 @@ ul.contact-content {
     padding: 0 30px;
     flex-basis: 33%;
     text-align: center;
-}
-
-.contact-content li i {
-    font-size: 50px;
-    color: crimson;
-    margin-bottom: 25px;
 }
 
 .contact-content li p {
