@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Benne&family=Montserrat:wght@200&family=Playfair+Display&family=Roboto&family=Rubik:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #f5f5f4;
+}
+
+body {
+    font-family: poppins, serif;
+}
+
+ul,
+nav {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 25px 35px 0;
+}
+
+header h1 {
+    text-transform: uppercase;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 35px;
+}
+
+header nav {
+    display: flex;
+    font-family:'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+header nav li {
+    margin: 0 20px;
+}
+
+header nav li:first-child {
+    margin-left: 0;
+}
+
+header nav li:last-child {
+    margin-right: 0;
+}
+
+header nav li:hover {
+    color: #807691;
+}
+
+@media(max-width:1000px) {
+    header {
+        padding: 20px 50px;
+    }
+}
+
+@media (max-width:700px) {
+    header {
+        flex-direction: column;
+    }
+    header h2 {
+        margin-bottom: 15px;
+    }
+    header nav li {
+        margin: 0 7px;
+    }
+}
+
+
+/*banner background area*/
+
+section {
+    display: flex;
+    align-items: center;
+    padding: 150px 160px;
+}
+
+
+@media (max-width:1000px) {
+    section {
+        padding: 100px 50px;
+    }
+}
+
+@media (max-width:600px) {
+    section {
+        padding: 125px 30px;
+    }
+}
+
+section p {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 35px;
+    padding: 0 20px;
+    line-height: 2;
+}
+
+.banner-area {
+    display: flex;
+    align-items: center;
+    padding: 25px 35px;
+}
+
+.banner-area {
+    position: relative;
+    justify-content: flex-start;
+    min-height: 100vh;
+    color: white;
+    text-align: left;
+}
+
+.banner-area .banner-img {
+    background-image: url(https://i.postimg.cc/gkMxLJBd/ladybird.jpg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.banner-area .banner-img:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+
+.banner-area > figure {
+    animation: imageAnimation 40s linear infinite 0s;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: -1;
+}
+
+.banner-area > figure:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+}
+
+.banner-area > figure:nth-child(1) {
+    background-image: url(https://i.postimg.cc/gkMxLJBd/ladybird.jpg); }
+.banner-area > figure:nth-child(2) {
+    animation-delay: 10s;
+    background-image: url(https://i.postimg.cc/W3f3yfRK/sac4.jpg);
+}
+.banner-area > figure:nth-child(3) {
+    animation-delay: 20s;
+    background-image: url(https://i.postimg.cc/QCw29wwp/ladybird3.jpg);
+}
+.banner-area > figure:nth-child(4) {
+    animation-delay: 30s;
+    background-image: url(https://i.postimg.cc/6p8VGr6r/kstreet.jpg);
+}
+
+@keyframes
+imageAnimation {  0% {
+    animation-timing-function: ease-in;
+    opacity: 0.5;
+}
+    8% {
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+    17% {
+        opacity: 1
+    }
+    25% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.banner-area .title1 {
+    font-family:'Montserrat', sans-serif;
+    font-size: 39px;
+    padding-right: 39px;
+    margin-top: auto;
+}
+
+.link-button {
+    margin-top: auto;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0.8rem;
+    background: transparent;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.link-button svg {
+    transition: all 0.2s;
+}
+
+.link-button:hover {
+    padding: 1.2rem 1.5rem;
+}
+
+.link-button:hover svg {
+    padding-left: 0.7rem;
+}
+
+.button {
+    margin-top: auto;
+    border: 1px solid;
+    font-size: 17px;
+    cursor: pointer;
+    padding: 0.8rem;
+    background: white;
+    transition: all 0.2s;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.button svg {
+    transition: all 0.2s;
+}
+.button__outline--white {
+    color: #fff;
+    border-color: #fff;
+}
+.button__outline--white:hover {
+    background: #fff;
+    color: #000;
+}
+.button__outline--white:hover .arrow-stroke {
+    stroke: #000;
+}
+.button__outline--black {
+    color: #000;
+    border-color: #000;
+}
+.button__outline--black .arrow-stroke {
+    stroke: #000;
+}
+.button__outline--black:hover {
+    background: #000;
+    color: #fff;
+}
+.button__outline--black:hover .arrow-stroke {
+    stroke: #fff;
+}
+.button:hover {
+    padding: 1.2rem 1.5rem;
+}
+.button:hover svg {
+    padding-left: 0.7rem;
+}
+
+@media (max-width:800px) {
+    .banner-area {
+        min-height: 600px;
+    }
+    .banner-area h1 {
+        font-size: 32px;
+    }
+    .banner-area h3 {
+        font-size: 20px;
+    }
+    .banner-area a.banner-btn {
+        padding: 15px 40px;
+    }
+}
+
+
+/*about area*/
+
+ul.about-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-content li {
+    padding: 20px;
+    height: 290px;
+    background-clip: content-box;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-left {
+    flex-basis: 55%;
+}
+
+.about-right {
+    flex-basis: 45%;
+}
+
+.about-area p {
+    font-family:'Montserrat', sans-serif;
+    max-width: 800px;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 0;
+}
+
+.section-title {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-size: 38px;
+    margin-bottom: 8%;
+}
+
+@media (max-width: 1000px) {
+    .about-left,
+    .about-right {
+        flex-basis: 100%;
+    }
+    .about-content li {
+        padding: 8px;
+    }
+}
+
+
+/*Last Year's Films Section*/
+#last {
+    background: #ebe8e2;
+    display: flex;
+    flex-direction: column;
+}
+
+.last-title {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-size: 38px;
+    margin-bottom: 8%;
+}
+
+ul.last-content {
+    width: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.last-content li {
+    flex-basis: 25%;
+}
+
+.last-content li p {
+    font-family:'Montserrat', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    line-height: 1.5;
+}
+
+@media (max-width:1000px) {
+    .last-content li {
+        flex-basis: 100%;
+        margin-bottom: 65px;
+    }
+    .last-content li:last-child {
+        margin-bottom: 0;
+    }
+    .last-content li p {
+        padding: 0;
+    }
+}
+
+/*opportunities area*/
+
+.opp-area{
+    padding: 50px 160px;
+}
+
+ul.opp-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.opp-content li {
+    padding: 20px;
+    height: 290px;
+    background-clip: content-box;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+.opp-left {
+    flex-basis: 55%;
+}
+
+.opp-right {
+    flex-basis: 45%;
+}
+
+.opp-area p {
+    font-family:'Montserrat', sans-serif;
+    max-width: 800px;
+    margin-bottom: 35px;
+    line-height: 1.5;
+    text-align: left;
+    padding-left: 0;
+}
+
+.opp-title {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: .2rem;
+    font-size: 39px;
+    margin-bottom: 8%;
+    line-height: 48px;
+}
+
+@media (max-width: 1000px) {
+    .opp-left,
+    .opp-right {
+        flex-basis: 100%;
+    }
+    .opp-content li {
+        padding: 8px;
+    }
+}
+
+#opportunities {
+    display: flex;
+    flex-direction: column;
+}
+
+.opportunities-title {
+    font-family:'Montserrat', sans-serif;
+    text-transform: uppercase;
+    line-height: 4px;
+    font-size: 38px;
+    text-align: right;
+    padding-top: 130px;
+    padding-right: 150px;
+}
+
+.gallery-image {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.caption-box{
+
+}
+.caption-title{
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+}
+
+.caption-box p{
+    text-align: left;
+    padding-top: 20px;
+}
+
+.gallery-image img {
+    height: 280px;
+    width: 465px;
+    transform: scale(1.0);
+    transition: transform 0.4s ease;
+}
+
+.img-box {
+    box-sizing: content-box;
+    margin: 30px;
+    height: 280px;
+    width: 465px;
+    overflow: hidden;
+    display: inline-block;
+    color: white;
+    background-color: white;
+}
+
+.img-box:hover img {
+    transform: scale(1.1);
+}
+
+.img-box:hover {
+    cursor: pointer;
+}
+
+.caption > p:nth-child(2) {
+    font-size: 0.8em;
+}
+
+.opacity-low {
+    opacity: 0.5;
+}
+
+/* contact area */
+
+#end {
+    background-color: #e7e0d3;
+}
+
+.end-area {
+    display: flex;
+    justify-content: space-around;
+    font-size: small;
+}
+
+#contact {
+    background-color: #e7e0d3;
+    display: flex;
+    /*flex-direction: column;*/
+}
+
+.contact-title {
+    text-transform: uppercase;
+    font-family:'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 8%;
+}
+
+ul.contact-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contact-content li {
+    padding: 0 30px;
+    flex-basis: 33%;
+    text-align: center;
+}
+
+.contact-content li i {
+    font-size: 50px;
+    color: crimson;
+    margin-bottom: 25px;
+}
+
+.contact-content li p {
+    margin: 0;
+}
+
+@media (max-width:1000px) {
+    .contact-content li {
+        flex-basis: 100%;
+        margin-bottom: 65px;
+    }
+    .contact-content li:last-child {
+        margin-bottom: 0;
+    }
+    .contact-content li p {
+        padding: 0
+    }
+}
+
+
+
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 60px;
+}
